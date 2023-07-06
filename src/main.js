@@ -4,19 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import tmpMP from './examAllpage.vue'
-
 Vue.config.productionTip = false
 
+/* eslint-disable no-new */
 new Vue({
+  el: '#app',
   router,
-  store,
-  render: h => h(App),
-}).$mount('#app')
-
-new Vue({
-  router,
-  store,
-  render: h=> h(tmpMP),
-}).$mount('#temporaryMainpage')
-
+  components: { App },
+  template: '<App/>'
+})
